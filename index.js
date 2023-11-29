@@ -1,8 +1,33 @@
 // import "./styles.css";
 
-// !  ============ 1 =================
+// ! ========================= 1 ================================================
 
-// ?  Q.1 Given the following JavaScript code: (method 1)
+// ?  Q.1 Write a function that takes a string as input and returns the string reversed.
+
+// function reverseString(str) {
+//   const splitstr = str.split("").reverse();
+
+//   const output = splitstr.reverse().join("");
+
+//   return output;
+// }
+// console.log(reverseString("abcd"));
+
+// ! =========================== 2 ===============================================
+
+// ?  Q.2 Create a function that checks if a given word or phrase is a palindrome (string is same from start and end).
+
+// function isPalindrome(str) {
+//   const cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+//   console.log("cleanStr: ", cleanStr);
+//   return cleanStr === cleanStr.split("").reverse().join("");
+// }
+// const word = "radar";
+// console.log("isPalindrome(phrase);: ", isPalindrome(word));
+
+// !  ========================== 3 ===============================================
+
+// ?  Q.3 Given the following JavaScript code: (method 1)
 // const str = "hello";
 // output:- m = 1 ,s= 2 ,i=2,n=1,g=1
 
@@ -48,11 +73,13 @@
 // const result = countCharacters("hello");
 // console.log(result);
 
-// =================== 2 =============================
+// ! =================== 4 =============================
 
-// const b = [1, 4, 8, 6];
-// const a = [2, 4, 6, 1, 3, 5];
-// output will be this in new array  [3,8,14,7,3,5]
+// ? Q.4 Given the following JavaScript code:
+
+// const a = [1, 4, 8, 6];
+// const b = [2, 4, 6, 1, 3, 5];
+// // output will be this in new array  [3,8,14,7,3,5]
 
 // const value = Math.max(b.length, a.length);
 // console.log(value);
@@ -70,10 +97,10 @@
 
 // console.log(array);
 
-//  =================== 3 =====================
+// !  =================== 5 ==============================
 
-// const str = "asjkldfjalksdjf";
-// // output:- m = 1 , s= 2 i=3
+// ? Q.5 take one string and in the output word in not repet 2nd time.
+// const str = "hello javacript";
 
 // let arr = [];
 
@@ -82,6 +109,7 @@
 // }
 
 // let f = {};
+
 // for (let i = 0; i < arr.length; i++) {
 //   if (f[arr[i]] !== null && f[arr[i]] !== undefined) {
 //     f[arr[i]] = f[arr[i]] + 1;
@@ -89,78 +117,73 @@
 //     f[arr[i]] = 1;
 //   }
 // }
-// console.log(Object.keys(f));
+// console.log(Object.keys(f).join(""));
 
-//  =============== 4 ============
-
-// const str = "kjaskfjkasjdfkjalk";
-// const charCount = {};
+// ? js built in function
+// const str = "hello javacript";
+// const f = {};
 
 // for (const char of str) {
-//   if (charCount[char]) {
-//     charCount[char]++;
-//   } else {
-//     charCount[char] = 1;
+//   console.log("char: ", char);
+//   if (char !== " ") {
+//     f[char] = (f[char] || 0) + 1;
 //   }
 // }
 
-// let output = "";
-// for (const char in charCount) {
-//   output += `${char}: ${charCount[char]}, `;
+// console.log(Object.keys(f));
+
+// !  =================== 6 ==============================
+
+// ? Q.6 Write a function that takes a sentence as a parameter and returns the longest word in it.
+// const a = "hello my name,javascript";
+
+// const b = a.split(/\s+/);
+// // console.log(b);
+// // b.map((j, i) => console.log(j));
+// var d = "";
+
+// for (const c of b) {
+//   if (e.length > d.length) {
+//     d = c;
+//   }
 // }
+// console.log("Longest word", d);
 
-// console.log(output);
+// Function
+// const paragraph =
+//   "In the midst of winter, I found there was,widddthin me, an invincible summer.";
 
-// ===================== 5 ===========
+// function findLongestWord(paragraph) {
+//   const words = paragraph.split(/\s+/);
+//   let longestWord = "";
 
-// function calculateCharacterFrequency(str) {
-//   const sanitizedStr = str.toLowerCase().replace(/\s/g, "");
-
-//   const frequencyMap = new Map();
-
-//   for (const char of sanitizedStr) {
-//     console.log(char);
-//     if (frequencyMap.has(char)) {
-//       frequencyMap.set(char, frequencyMap.get(char) + 1);
-//     } else {
-//       frequencyMap.set(char, 1);
+//   for (const word of words) {
+//     const cleanedWord = word.replace(/[^\w]/g, ""); // Remove non-alphanumeric characters
+//     if (cleanedWord.length > longestWord.length) {
+//       longestWord = cleanedWord;
 //     }
 //   }
 
-//   let result = "";
-//   for (const [char, frequency] of frequencyMap) {
-//     result += `${char}: ${frequency}, `;
+//   return longestWord;
+// }
+
+// const longestWord = findLongestWord(paragraph);
+// console.log("Longest word:", longestWord);
+
+// !  =================== 7 ==============================
+
+// ? Q.7 Write a function that calculates the sum of all elements in an array.
+
+// function arraysum(val) {
+//   let sum = 0;
+//   if (val.length) {
+//     for (let i = 0; i < val.length; i++) {
+//       if (typeof val[i] !== "string") {
+//         sum += val[i];
+//       }
+//     }
 //   }
-
-//   return result;
+//   return sum;
 // }
-
-// // Example usage
-// const str = "Hello";
-// const frequencyOutput = calculateCharacterFrequency(str);
-// console.log(frequencyOutput);
-
-// ! ========================= 6 ================================================
-
-// ?  Q.6 Write a function that takes a string as input and returns the string reversed.
-
-// function reverseString(str) {
-//   const splitstr = str.split("").reverse();
-
-//   const output = splitstr.reverse().join("");
-
-//   return output;
-// }
-// console.log(reverseString("abcd"));
-
-// ! =========================== 7 ===============================================
-
-// ?  Q.7 Create a function that checks if a given word or phrase is a palindrome (string is same from start and end).
-
-// function isPalindrome(str) {
-//   const cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-//   //   console.log("cleanStr: ", cleanStr);
-//   return cleanStr === cleanStr.split("").reverse().join("");
-// }
-// const word = "radar";
-// console.log("isPalindrome(phrase);: ", isPalindrome(word));
+// const arr = arraysum([5, 155, "12"]);
+// console.log("arr: ", arr);
