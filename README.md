@@ -4,20 +4,23 @@ This repository contains JavaScript code snippets for various coding challenges.
 
 ## Table of Contents
 
-1. [Reverse a String](#reverse-a-string)
-2. [Check Palindrome](#check-palindrome)
-3. [Count Characters](#count-characters)
-4. [Array Addition](#array-addition)
-5. [Unique Characters](#unique-characters)
-6. [Longest Word](#longest-word)
-7. [Array Sum](#array-sum)
+1. [Reverse a String](#1-reverse-a-string)
+2. [Check Palindrome](#2-check-palindrome)
+3. [Count Characters](#3-count-characters)
+4. [Array Addition](#4-array-addition)
+5. [Unique Characters](#5-unique-characters)
+6. [Longest Word](#6-longest-word)
+7. [Array Sum](#7-sum-of-array-elements)
+8. [Remove Duplicates](#8remove-duplicates)
 
 ---
 
 ## 1. Reverse a String
 
 ### Description
+
 Write a function that takes a string as input and returns the string reversed.
+
 ### Solution
 
 ```javascript
@@ -29,11 +32,13 @@ function reverseString(str) {
 
 console.log(reverseString("abcd"));
 ```
+
 ---
 
 ## 2. Check Palindrome
 
 ### Description
+
 Create a function that checks if a given word or phrase is a palindrome (string is the same from start and end).
 
 ### Solution
@@ -53,24 +58,26 @@ console.log("Is Palindrome:", isPalindrome(word));
 ## 3. Count Characters
 
 ### Description
+
 Given a string, count the occurrences of each character and output the result.
 
 ### Solution (Type 1)
 
 ```javascript
 const str = "hello";
-const f = {};
+const object = {};
 
 for (let i = 0; i < str.length; i++) {
-  if (f[str[i]] !== null && f[str[i]] !== undefined) {
-    f[str[i]] = f[str[i]] + 1;
+  if (object[str[i]] !== null && object[str[i]] !== undefined) {
+    object[str[i]] = object[str[i]] + 1;
   } else {
-    f[str[i]] = 1;
+    object[str[i]] = 1;
   }
 }
 
-console.log(f);
+console.log(object);
 ```
+
 ### Solution (Type 2)
 
 ```javascript
@@ -85,11 +92,13 @@ for (let i = 0; i < characters.length; i++) {
 
 console.log(output);
 ```
+
 ---
 
 ## 4. Array Addition
 
 ### Description
+
 Given two arrays, add the corresponding elements and create a new array with the results.
 
 ### Solution
@@ -116,35 +125,33 @@ console.log(array);
 ## 5. Unique Characters
 
 ### Description
+
 Given a string, output the characters that do not repeat.
 
 ### Solution 1
 
 ```javascript
-
 const str = "hello javacript";
 let arr = [];
 for (let i = 0; i < str.length; i++) {
   arr.push(str.charAt(i));
 }
 
-let f = {};
+let object = {};
 for (let i = 0; i < arr.length; i++) {
-  if (f[arr[i]] !== null && f[arr[i]] !== undefined) {
-    f[arr[i]] = f[arr[i]] + 1;
+  if (object[arr[i]] !== null && object[arr[i]] !== undefined) {
+    object[arr[i]] = object[arr[i]] + 1;
   } else {
-    f[arr[i]] = 1;
+    object[arr[i]] = 1;
   }
 }
 
-console.log(Object.keys(f).join(""));
-
+console.log(Object.keys(object).join(""));
 ```
 
 ### Solution 2
 
 ```javascript
-
 const str = "hello javacript";
 const f = {};
 
@@ -155,7 +162,6 @@ for (const char of str) {
 }
 
 console.log(Object.keys(f));
-
 ```
 
 ---
@@ -163,13 +169,14 @@ console.log(Object.keys(f));
 ## 6. Longest Word
 
 ### Description
+
 Write a function that takes a sentence as a parameter and returns the longest word in it.
 
-### Solution 
+### Solution
 
 ```javascript
-
-const paragraph = "In the midst of winter, I found there was, within me, an invincible summer.";
+const paragraph =
+  "In the midst of winter, I found there was, within me, an invincible summer.";
 
 function findLongestWord(paragraph) {
   const words = paragraph.split(/\s+/);
@@ -187,17 +194,17 @@ function findLongestWord(paragraph) {
 
 const longestWord = findLongestWord(paragraph);
 console.log("Longest word:", longestWord);
-
-
 ```
+
 ---
 
-## 7. Array Sum
+## 7. Sum of Array Elements
 
 ### Description
+
 Write a function that calculates the sum of all elements in an array.
 
-### Solution 
+### Solution
 
 ```javascript
 function arraySum(arr) {
@@ -214,5 +221,30 @@ function arraySum(arr) {
 
 const arrSum = arraySum([5, 155, "12"]);
 console.log("Array Sum:", arrSum);
+```
 
+---
+
+## 8.Remove Duplicates
+
+### Description
+
+Write a function that removes duplicate elements from an array.
+
+### Solution
+
+```javascript
+function removeDuplicate(r) {
+  let newarr = [];
+  for (let i = 0; i < r.length; i++) {
+    if (!newarr.includes(r[i])) {
+      newarr.push(r[i]);
+    }
+  }
+  return newarr;
+}
+
+const arr = [10, 12, 15, 12, 10, 56];
+const removeDuplicateValue = removeDuplicate(arr);
+console.log("removeDuplicateValue: ", removeDuplicateValue);
 ```
