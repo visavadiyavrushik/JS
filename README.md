@@ -248,3 +248,40 @@ const arr = [10, 12, 15, 12, 10, 56];
 const removeDuplicateValue = removeDuplicate(arr);
 console.log("removeDuplicateValue: ", removeDuplicateValue);
 ```
+
+---
+
+## 8.Function to Remove null values and their keys
+
+### Description
+
+Write a Function to remove null values and their keys
+
+### Solution
+
+```javascript
+const obj = {
+  name: "John",
+  age: 30,
+  job: "developer",
+  mobileNo: null,
+};
+
+// Function to remove null values and their keys
+const removeNullValues = (inputObject) => {
+  const result = {};
+
+  for (const key in inputObject) {
+    if (inputObject[key] !== null) {
+      result[key] = inputObject[key];
+    }
+  }
+
+  return result;
+};
+
+// Call the function with the given object
+const newObj = removeNullValues(obj);
+
+console.log(newObj);
+```

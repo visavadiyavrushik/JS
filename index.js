@@ -192,16 +192,48 @@
 
 //  ? Q.8 Write a function that removes duplicate elements from an array
 
-function removeDuplicate(r) {
-  let newarr = [];
-  for (let i = 0; i < r.length; i++) {
-    if (!newarr.includes(r[i])) {
-      newarr.push(r[i]);
+// function removeDuplicate(r) {
+//   let newarr = [];
+//   for (let i = 0; i < r.length; i++) {
+//     if (!newarr.includes(r[i])) {
+//       newarr.push(r[i]);
+//     }
+//   }
+//   return newarr;
+// }
+
+// const arr = [10, 12, 15, 12, 10, 56];
+// const removeDuplicateValue = removeDuplicate(arr);
+// console.log("removeDuplicateValue: ", removeDuplicateValue);
+
+// ! ===================== 9 =================================
+
+//  ? Q.9 Write a Function to remove null values and their keys
+
+const obj = {
+  name: "John",
+  age: 30,
+  job: "developer",
+  mobileNo: null,
+};
+
+// Function to remove null values and their keys
+const removeNullValues = (inputObject) => {
+  const result = {};
+
+  // Iterate through the keys
+  for (const key in inputObject) {
+    // Check if the value is not null
+    if (inputObject[key] !== null) {
+      // Add the key-value pair to the result object
+      result[key] = inputObject[key];
     }
   }
-  return newarr;
-}
 
-const arr = [10, 12, 15, 12, 10, 56];
-const removeDuplicateValue = removeDuplicate(arr);
-console.log("removeDuplicateValue: ", removeDuplicateValue);
+  return result;
+};
+
+// Call the function with the given object
+const newObj = removeNullValues(obj);
+
+console.log(newObj);
