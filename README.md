@@ -11,7 +11,8 @@ This repository contains JavaScript code snippets for various coding challenges.
 5. [Unique Characters](#5-unique-characters)
 6. [Longest Word](#6-longest-word)
 7. [Array Sum](#7-sum-of-array-elements)
-8. [Remove Duplicates](#8remove-duplicates)
+8. [Remove Duplicates](#8remove-du9licates)
+9. [Remove null values and their keys](#9function-to-remove-null-values-and-their-keys)
 
 ---
 
@@ -251,7 +252,7 @@ console.log("removeDuplicateValue: ", removeDuplicateValue);
 
 ---
 
-## 8.Function to Remove null values and their keys
+## 9.Function to Remove null values and their keys
 
 ### Description
 
