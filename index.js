@@ -99,7 +99,7 @@
 
 // !  =================== 5 ==============================
 
-// ? Q.5 take one string and in the output word in not repet 2nd time.
+// ? Q.5 take one string and in the output letter in not repet 2nd time.
 // const str = "hello javacript";
 
 // let arr = [];
@@ -120,17 +120,16 @@
 // console.log(Object.keys(f).join(""));
 
 // ? js built in function
-// const str = "hello javacript";
-// const f = {};
+const str = "hello javacript";
+const f = {};
 
-// for (const char of str) {
-//   console.log("char: ", char);
-//   if (char !== " ") {
-//     f[char] = (f[char] || 0) + 1;
-//   }
-// }
+for (const char of str) {
+  if (char !== " ") {
+    f[char] = (f[char] || 0) + 1;
+  }
+}
 
-// console.log(Object.keys(f));
+console.log(Object.keys(f).join(""));
 
 // !  =================== 6 ==============================
 
@@ -210,30 +209,30 @@
 
 //  ? Q.9 Write a Function to remove null values and their keys
 
-const obj = {
-  name: "John",
-  age: 30,
-  job: "developer",
-  mobileNo: null,
-};
+// const obj = {
+//   name: "John",
+//   age: 30,
+//   job: "developer",
+//   mobileNo: null,
+// };
 
-// Function to remove null values and their keys
-const removeNullValues = (inputObject) => {
-  const result = {};
+// // Function to remove null values and their keys
+// const removeNullValues = (inputObject) => {
+//   const result = {};
 
-  // Iterate through the keys
-  for (const key in inputObject) {
-    // Check if the value is not null
-    if (inputObject[key] !== null) {
-      // Add the key-value pair to the result object
-      result[key] = inputObject[key];
-    }
-  }
+//   // Iterate through the keys
+//   for (const key in inputObject) {
+//     // Check if the value is not null
+//     if (inputObject[key] !== null) {
+//       // Add the key-value pair to the result object
+//       result[key] = inputObject[key];
+//     }
+//   }
 
-  return result;
-};
+//   return result;
+// };
 
-// Call the function with the given object
-const newObj = removeNullValues(obj);
+// // Call the function with the given object
+// const newObj = removeNullValues(obj);
 
-console.log(newObj);
+// console.log(newObj);
