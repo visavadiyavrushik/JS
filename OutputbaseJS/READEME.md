@@ -5,6 +5,7 @@ This repository contains JavaScript code snippets for various coding challenges.
 ## Table of Contents
 
 1. [Sum of Matrix](#1-sum-of-matrix)
+2. [Give rank by subject marks](#2-give-rank-by-subject-marks)
 
 ---
 
