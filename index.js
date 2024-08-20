@@ -120,16 +120,16 @@
 // console.log(Object.keys(f).join(""));
 
 // ? js built in function
-const str = "hello javacript";
-const f = {};
+// const str = "hello javacript";
+// const f = {};
 
-for (const char of str) {
-  if (char !== " ") {
-    f[char] = (f[char] || 0) + 1;
-  }
-}
+// for (const char of str) {
+//   if (char !== " ") {
+//     f[char] = (f[char] || 0) + 1;
+//   }
+// }
 
-console.log(Object.keys(f).join(""));
+// console.log(Object.keys(f).join(""));
 
 // !  =================== 6 ==============================
 
@@ -236,3 +236,60 @@ console.log(Object.keys(f).join(""));
 // const newObj = removeNullValues(obj);
 
 // console.log(newObj);
+
+// ? 10
+
+// function countPossibilities(target, coins) {
+//   // Initialize an array to store the number of possibilities for each target value
+//   const dp = new Array(target + 1).fill(0);
+//   // There is 1 possibility to make 0 rupees (by not selecting any coin)
+//   dp[0] = 1;
+
+//   // Iterate through each coin denomination
+//   for (const coin of coins) {
+//     // Update the possibilities array based on the current coin
+//     for (let i = coin; i <= target; i++) {
+//       dp[i] += dp[i - coin];
+//     }
+//   }
+
+//   // Return the number of possibilities to make the target amount
+//   return dp[target];
+// }
+
+// // Function to get target amount from the user
+// function getTargetAmountFromUser() {
+//   let targetAmount = parseInt(prompt("Enter the target amount in rupees:"));
+
+//   // Validate the input
+//   while (isNaN(targetAmount) || targetAmount < 0) {
+//     targetAmount = parseInt(
+//       prompt("Invalid input. Please enter a valid positive number:")
+//     );
+//   }
+
+//   return targetAmount;
+// }
+
+// // Main function to calculate possibilities for the target amount entered by the user
+// function main() {
+//   const targetAmount = getTargetAmountFromUser();
+//   const coins = [1, 2, 5, 10];
+//   const possibilities = countPossibilities(targetAmount, coins);
+//   console.log(
+//     `Number of possibilities to make ${targetAmount} rupees: ${possibilities}`
+//   );
+// }
+
+// // Call the main function
+// main();
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+console.log(shuffleArray([1, [3, 4], [6, 7], [2, 3]]));
