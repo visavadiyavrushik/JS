@@ -14,6 +14,9 @@ This repository contains JavaScript code snippets for various coding challenges.
 8. [Remove Duplicates](#8remove-du9licates)
 9. [Remove null values and their keys](#9function-to-remove-null-values-and-their-keys)
 
+10. [Find the maximum value in an array](#10how-can-you-shuffle-an-array-in-javaScript)
+11. [Find the First Non-Repeating Character](#11-find-the-first-non-repeating-character)
+
 ---
 
 ## 1. Reverse a String
@@ -32,6 +35,29 @@ function reverseString(str) {
 }
 
 console.log(reverseString("abcd"));
+```
+
+### 1.1 reverse string without use `.reverse()`
+
+```javascript
+function reverseString(str) {
+  // ? 1
+  // let reversed = "";
+  // for (let char of str) {
+  //   reversed = char + reversed;
+  // }
+  // return reversed;
+
+  // ? 2
+  let rev = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    rev += str[i];
+  }
+  return rev;
+}
+
+console.log(reverseString("hello"));
 ```
 
 ---
@@ -289,7 +315,7 @@ console.log(newObj);
 
 ---
 
-## 10.How can you shuffle an array in JavaScript?s
+## 10.How can you shuffle an array in JavaScript?
 
 ### Description
 
@@ -307,4 +333,29 @@ function shuffleArray(array) {
 }
 
 console.log(shuffleArray([1, [3, 4], [6, 7], [2, 3]]));
+```
+
+---
+
+## 11 Find the First Non-Repeating Character
+
+### Solution
+
+```javascript
+const firstUniqueChar = (str) => {
+  let count = {};
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    count[char] = (count[char] || 0) + 1;
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    if (count[str[i]] === 1) {
+      return str[i];
+    }
+  }
+  return count;
+};
+
+console.log(firstUniqueChar("swiss"));
 ```

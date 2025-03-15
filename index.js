@@ -284,12 +284,50 @@
 // // Call the main function
 // main();
 
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
+// function shuffleArray(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+//   return array;
+// }
 
-console.log(shuffleArray([1, [3, 4], [6, 7], [2, 3]]));
+// console.log(shuffleArray([1, [3, 4], [6, 7], [2, 3]]));
+
+// reverse string without use reverse
+// function reverseString(str) {
+//   // ? 1
+//   // let reversed = "";
+//   // for (let char of str) {
+//   //   reversed = char + reversed;
+//   // }
+//   // return reversed;
+
+//   // ? 2
+//   let rev = "";
+
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     rev += str[i];
+//   }
+//   return rev;
+// }
+
+// console.log(reverseString("hello"));
+
+// Find the First Non-Repeating Character
+// const firstUniqueChar = (str) => {
+//   let count = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     count[char] = (count[char] || 0) + 1;
+//   }
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (count[str[i]] === 1) {
+//       return str[i];
+//     }
+//   }
+//   return count;
+// };
+
+// console.log(firstUniqueChar("swiss")); // Output: "w"
