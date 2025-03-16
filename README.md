@@ -16,6 +16,7 @@ This repository contains JavaScript code snippets for various coding challenges.
 
 10. [Find the maximum value in an array](#10how-can-you-shuffle-an-array-in-javaScript)
 11. [Find the First Non-Repeating Character](#11-find-the-first-non-repeating-character)
+12. [fibonacci series](#12fibonacci-series)
 
 ---
 
@@ -358,4 +359,27 @@ const firstUniqueChar = (str) => {
 };
 
 console.log(firstUniqueChar("swiss"));
+```
+
+## 12.fibonacci series
+
+## solution
+
+```javascript
+const fibonacci = (n) => {
+  let fib = [];
+  let a = 0,
+    b = 1;
+
+  for (let i = 0; i < n; i++) {
+    fib.push(a);
+    let temp = a + b;
+    a = b;
+    b = temp;
+  }
+
+  return fib;
+};
+
+console.log(fibonacci(7));
 ```
