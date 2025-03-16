@@ -354,19 +354,25 @@
 // console.log(">>>>", majorityElement([4, 2, 2, 3, 3, 3]));
 
 // Generate Fibonacci Series Up to N (Without Recursion)
-const fibonacci = (n) => {
-  let fib = [];
-  let a = 0,
-    b = 1;
+// const fibonacci = (n) => {
+//   let fib = [];
+//   let a = 0,
+//     b = 1;
 
-  for (let i = 0; i < n; i++) {
-    fib.push(a);
-    let temp = a + b;
-    a = b;
-    b = temp;
-  }
+//   for (let i = 0; i < n; i++) {
+//     fib.push(a);
+//     let temp = a + b;
+//     a = b;
+//     b = temp;
+//   }
 
-  return fib;
-};
+//   return fib;
+// };
 
-console.log(fibonacci(7)); // Output: [0, 1, 1, 2, 3, 5, 8]
+// console.log(fibonacci(7)); // Output: [0, 1, 1, 2, 3, 5, 8]
+
+// const flattenArray = (arr) => {
+//   return arr.flat(3);
+// };
+
+// console.log(flattenArray([1, [2, [3, [4]], 5]]));
